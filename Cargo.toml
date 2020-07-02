@@ -1,5 +1,5 @@
 [package]
-name = "myExercism-Rust"
+name = "exercism-rust"
 version = "0.1.0"
 authors = ["Anton Pavlov <anton.pavlov@gmail.com>"]
 edition = "2018"
