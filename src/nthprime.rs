@@ -13,8 +13,8 @@
 /// # Examples
 ///
 /// ```rust
-/// assert_eq!(np::nth(1), 3);
-/// assert_eq!(np::nth(10_000), 104_743);
+/// assert_eq!(nth(1), 3);
+/// assert_eq!(nth(10_000), 104_743);
 /// ```
 pub fn nth(n: u32) -> u32 {
     let mut ret_nth: u32;
@@ -132,4 +132,31 @@ pub fn nth(n: u32) -> u32 {
         ret // is_prime method return
     }
     ret_nth // nth method return
+}
+
+#[cfg(test)]
+mod test {
+    use super::*;
+    #[test]
+    fn test_first_prime() {
+        assert_eq!(nth(0), 2);
+    }
+
+    #[test]
+    #[ignore]
+    fn test_second_prime() {
+        assert_eq!(nth(1), 3);
+    }
+
+    #[test]
+    #[ignore]
+    fn test_sixth_prime() {
+        assert_eq!(nth(5), 13);
+    }
+
+    #[test]
+    #[ignore]
+    fn test_big_prime() {
+        assert_eq!(nth(10_000), 104_743);
+    }
 }
